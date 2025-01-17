@@ -54,13 +54,15 @@ for (let i = 0; i < rango; i++) {
                 method:"GET",
                 success:function(data){
                     if(valor>=1){
-                        $('#result').html(` <div class='carta'>
-                            <img class='fotolista' src='./imagenes/alumno.png'>
-                            <p class='idlista'>ID: ${data.id}</p>
-                            <p class='nombrelista'>${data.nombre}</p>
-                            <p class='apellidolista'>${data.apellido}</p>
-                            <p class='telefonolista'>${data.telefono}</p>
-                        </div>`)
+                        $('#result').html(`
+                            <div class='carta'>
+                                <img class='fotolista' src='./imagenes/alumno.png'>
+                                <p class='idlista'>ID: ${data.id}</p>
+                                <p class='nombrelista'>${data.nombre}</p>
+                                <p class='apellidolista'>${data.apellido}</p>
+                                <p class='telefonolista'>${data.telefono}</p>
+                            </div>
+                        `);
                      }
                     else{
                         $('#result').html('')
