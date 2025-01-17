@@ -77,6 +77,8 @@ for (let i = 0; i < rango; i++) {
             `);
         
             $('.enviar').on('click', function () {
+                let rangonuevo=rango+1
+                rangonuevo=toString(rangonuevo)
                 let nombrenuevo = $('.nombre').val();
                 let apellidonuevo = $('.apellido').val();
                 let telefononuevo = $('.telefono').val();
@@ -89,7 +91,7 @@ for (let i = 0; i < rango; i++) {
                     type: "POST",
                     contentType: "application/json", 
                     data: JSON.stringify({ 
-                        id: rango + 1, 
+                        id: rangonuevo, 
                         nombre: nombrenuevo,
                         apellido: apellidonuevo,
                         telefono: telefononuevo
