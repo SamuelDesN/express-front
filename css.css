@@ -38,6 +38,7 @@ button:hover {
     display: grid;
     gap: 2%;
     grid-template-columns: repeat(3,1fr);
+    height: 100vh;
 }
 .carta {
     margin: auto;
