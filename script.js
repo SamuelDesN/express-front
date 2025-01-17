@@ -47,6 +47,7 @@ for (let i = 0; i < rango; i++) {
         })
         $('#buscarid').on('click',function(){
             let valor=$('#buscador').val()
+            valor = parseInt(valor)
             $('#buscador').val("")
             $.ajax({
                 url:`https://express-back-eight.vercel.app/api/users/${valor}`,
