@@ -56,9 +56,9 @@ for (let i = 0; i < rango; i++) {
                         $('#result').html(` <div class='carta'>
                             <img class='fotolista' src='./imagenes/alumno.png'>
                             <p class='idlista'>ID: ${data.id}</p>
-                            <p class='nombrelista'>${data.nombre}</p>
-                            <p class='apellidolista'>${data.apellido}</p>
-                            <p class='telefonolista'>${data.telefono}</p>
+                            <p class='nombrelista'>Nombre: ${data.nombre}</p>
+                            <p class='apellidolista'>Apellido: ${data.apellido}</p>
+                            <p class='telefonolista'>Telefono: ${data.telefono}</p>
                         </div>`)
                      }
                     else{
