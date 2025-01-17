@@ -102,6 +102,13 @@ for (let i = 0; i < rango; i++) {
                         rango++;
                     },
                 });
+                let rango=0
+                $.ajax({
+                    url:"https://express-back-eight.vercel.app/api/users/",
+                    method:"GET",
+                    success:function(data){
+                        rango=data.length
+                        $('#buscador').attr("placeholder", `Introduce numero del 1 al ${rango}`)}})
             });
         });
     })
