@@ -47,22 +47,19 @@ for (let i = 0; i < rango; i++) {
         })
         $('#buscarid').on('click',function(){
             let valor=$('#buscador').val()
-            valor = parseInt(valor)
             $('#buscador').val("")
             $.ajax({
                 url:`https://express-back-eight.vercel.app/api/users/${valor}`,
                 method:"GET",
                 success:function(data){
                     if(valor>=1){
-                        $('#result').html(`
-                            <div class='carta'>
-                                <img class='fotolista' src='./imagenes/alumno.png'>
-                                <p class='idlista'>ID: ${data.id}</p>
-                                <p class='nombrelista'>${data.nombre}</p>
-                                <p class='apellidolista'>${data.apellido}</p>
-                                <p class='telefonolista'>${data.telefono}</p>
-                            </div>
-                        `);
+                        $('#result').html(` <div class='carta'>
+                            <img class='fotolista' src='./imagenes/alumno.png'>
+                            <p class='idlista'>ID: ${data.id}</p>
+                            <p class='nombrelista'>${data.nombre}</p>
+                            <p class='apellidolista'>${data.apellido}</p>
+                            <p class='telefonolista'>${data.telefono}</p>
+                        </div>`)
                      }
                     else{
                         $('#result').html('')
